@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro Lost & Found - UX Case Study</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="metro-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span>SD</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="project-main">
+        <!-- Hero Section -->
+        <section class="project-hero">
+            <div class="hero-layout">
+                <div class="hero-left">
+                    <h1>Metro Lost & Found</h1>
+                    
+                    <div class="problem-section">
+                        <h2><span class="problem-text">Problem</span> Statement</h2>
+                        <p>The current metro lost and found system is slow, confusing, and <strong>hard to navigate</strong>. Users face delays and poor tracking, leading to frustration and ineffectiveness.</p>
+                    </div>
+                    
+                    <div class="solution-section">
+                        <h2><span class="design-solution">Design</span> Solution</h2>
+                        <p>The Metro Lost and Found project streamlines <strong>reporting and retrieving</strong> lost items through a user-friendly platform, offering real-time updates and efficient tracking to enhance passenger convenience.</p>
+                    </div>
+                </div>
+                
+                <div class="hero-right">
+                    <div class="project-phone">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=300&h=500&fit=crop" alt="Metro App Interface">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secondary Research -->
+        <section class="section">
+            <h2>Secondary Research</h2>
+            <ul class="research-list">
+                <li>The secondary research began with studying <strong>research papers, articles/journals</strong> relevant to the topic.</li>
+                <li>Further steps involved the literature review which helped to <strong>understand the problem better & analyse on the basis of other people's work</strong>.</li>
+            </ul>
+        </section>
+
+        <!-- Business Goals -->
+        <section class="section">
+            <h2>Business Goals (what company wants to achieve)</h2>
+            <div class="goals-grid">
+                <div class="goal-item">Customer Satisfaction</div>
+                <div class="goal-item">Operational Efficiency</div>
+                <div class="goal-item">Decision Making</div>
+                <div class="goal-item">Security & Transparency</div>
+                <div class="goal-item">Brand Image & Trust</div>
+                <div class="goal-item">Resource Management</div>
+                <div class="goal-item">Reduced Complaints</div>
+                <div class="goal-item">Seamless Retrieval</div>
+                <div class="goal-item">Cost Reduction</div>
+                <div class="goal-item">Scalability</div>
+            </div>
+        </section>
+
+        <!-- Target User -->
+        <section class="section">
+            <h2>Target User / Market Segment</h2>
+            <div class="user-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Daily Commuter</th>
+                            <th>Occasional Traveler</th>
+                            <th>Tourists</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Frequency of Usage</strong></td>
+                            <td>High daily usage</td>
+                            <td>Moderate (weekly or monthly)</td>
+                            <td>Low (once or twice during stay or short-term visits)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Common Lost Items</strong></td>
+                            <td>Keys, wallets, access cards, mobile phones, headphones, water bottles, umbrellas, occasionally small electronics or documents</td>
+                            <td>Bags, chargers, books, shopping bags, jackets, and personal items (eg. glasses, watch)</td>
+                            <td>Luggage, cameras, passports, travel documents, accessories, and personal memorabilia</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Recovery Urgency</strong></td>
+                            <td>High as lost items often include essentials for work or daily routines</td>
+                            <td>Moderate as most items are often essential but not necessary or needed immediately</td>
+                            <td>Very high, especially for essential documents and travel items, which can disrupt their trip</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Primary Pain Points</strong></td>
+                            <td>Time constraints, inadequate item tracking, limited visibility & inconsistent retrieval processes</td>
+                            <td>Language barriers, difficulty in navigating unfamiliar processes, limited tracking options</td>
+                            <td>Reduced information about the process, inconsistent or unclear procedures, and language barriers</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Design Strategy -->
+        <section class="section">
+            <h2>Design Strategy</h2>
+            <div class="strategy-flow">
+                <div class="strategy-item">User Research & Analysis</div>
+                <div class="strategy-item">Deployment & Support</div>
+                <div class="strategy-item">Define Requirements & Objectives</div>
+                <div class="strategy-item">Implementation & Integration</div>
+                <div class="strategy-item">Design UX & UI</div>
+                <div class="strategy-item">Testing & Iteration</div>
+            </div>
+        </section>
+
+        <!-- Fishbone Analysis -->
+        <section class="section">
+            <h2>Fishbone Analysis</h2>
+            <div class="fishbone-clean">
+                <!-- Main spine -->
+                <div class="main-spine"></div>
+                <div class="arrow-head"></div>
+                
+                <!-- Top branches -->
+                <div class="top-branches">
+                    <div class="branch-group materials-group">
+                        <h4>Materials</h4>
+                        <div class="causes">
+                            <div>Insufficient Documentation</div>
+                            <div>Inefficient Item Locating</div>
+                            <div>Faulty recovery mechanism</div>
+                        </div>
+                        <div class="branch-line materials-line"></div>
+                    </div>
+                    
+                    <div class="branch-group environment-group">
+                        <h4>Environment</h4>
+                        <div class="causes">
+                            <div>Unorganised Lost & Found Section</div>
+                            <div>High Traffic</div>
+                        </div>
+                        <div class="branch-line environment-line"></div>
+                    </div>
+                    
+                    <div class="branch-group people-group">
+                        <h4>People</h4>
+                        <div class="causes">
+                            <div>Inadequate Training</div>
+                            <div>Limited Staff</div>
+                        </div>
+                        <div class="branch-line people-line"></div>
+                    </div>
+                </div>
+                
+                <!-- Bottom branches -->
+                <div class="bottom-branches">
+                    <div class="branch-group methods-group">
+                        <h4>Methods</h4>
+                        <div class="causes">
+                            <div>Poor Interface</div>
+                            <div>Lack of Integration</div>
+                        </div>
+                        <div class="branch-line methods-line"></div>
+                    </div>
+                    
+                    <div class="branch-group technology-group">
+                        <h4>Technology</h4>
+                        <div class="causes">
+                            <div>Complex Reporting</div>
+                            <div>Slow Updates</div>
+                            <div>Unclear Communication</div>
+                        </div>
+                        <div class="branch-line technology-line"></div>
+                    </div>
+                    
+                    <div class="branch-group process-group">
+                        <h4>Process</h4>
+                        <div class="branch-line process-line"></div>
+                    </div>
+                </div>
+                
+                <!-- Problem box -->
+                <div class="problem-box">
+                    Metro Lost Item<br>Reporting Process
+                </div>
+            </div>
+        </section>
+
+        <!-- User Study - Persona -->
+        <section class="section">
+            <h2>User Study - Persona</h2>
+            <div class="persona-layout">
+                <!-- Top row -->
+                <div class="persona-top-row">
+                    <div class="persona-card personality-card">
+                        <h4>Personality</h4>
+                        <ul>
+                            <li>Ravi is data-driven and solution-focused.</li>
+                            <li>Time-Conscious: He values punctuality and avoids wasting time.</li>
+                            <li>Independent but Social: Ravi is self-sufficient but enjoys weekends with friends.</li>
+                            <li>Adaptable: He prefers routine but can adjust to changes with helpful tools.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="persona-card center-card">
+                        <div class="persona-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=face" alt="Ravi">
+                        </div>
+                        <div class="persona-info">
+                            <h3>Name: Ravi</h3>
+                            <p>Age: 27</p>
+                            <p>Occupation: IT Professional</p>
+                        </div>
+                        <div class="persona-ratings">
+                            <div class="rating-row">
+                                <span>Commuting:</span>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                            <div class="rating-row">
+                                <span>Time Conscious:</span>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                            <div class="rating-row">
+                                <span>Socially Balanced:</span>
+                                <div class="stars">★★★★☆</div>
+                            </div>
+                            <div class="rating-row">
+                                <span>Tech Savvy:</span>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                            <div class="rating-row">
+                                <span>Organised:</span>
+                                <div class="stars">★★★★☆</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="persona-card goals-card">
+                        <h4>Goals</h4>
+                        <ul>
+                            <li>Professional: Ravi aims to become a senior developer in the next few years.</li>
+                            <li>Efficiency: He uses daily metro rides to maximise productivity with podcasts, emails, and articles.</li>
+                            <li>Personal Development: Ravi enjoys learning new skills, including coding languages and tech trends.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Bottom row -->
+                <div class="persona-bottom-row">
+                    <div class="persona-card pain-points-card">
+                        <h4>Pain Points</h4>
+                        <ul>
+                            <li>Lost Belongings: Ravi worries about losing important items like his laptop bag or headphones.</li>
+                            <li>Inefficient Recovery: He dislikes the manual process of recovering lost items.</li>
+                            <li>Delays & Inefficiency: Metro delays frustrate him, disrupting his schedule.</li>
+                            <li>Cluttered Apps: Ravi dislikes apps that are poorly designed or overly complex.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="persona-card needs-card">
+                        <h4>Needs</h4>
+                        <ul>
+                            <li>User-Friendly App: Ravi wants an easy-to-use lost & found app.</li>
+                            <li>Instant Notifications: He prefers real-time updates on delays and lost items.</li>
+                            <li>Quick Resolutions: Ravi needs a fast, reliable system to recover lost items without visiting stations.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Information Architecture -->
+        <section class="section">
+            <h2>Information Architecture - Final Card Sorting</h2>
+            <div class="card-sorting-modern">
+                <div class="card-column">
+                    <div class="card-category-modern">
+                        <div class="category-header">
+                            <h3>Report & Track</h3>
+                        </div>
+                        <div class="card-grid">
+                            <div class="card-modern">Report Lost Item</div>
+                            <div class="card-modern">Track Recent Metro Trips</div>
+                            <div class="card-modern">View Report History</div>
+                            <div class="card-modern">Filter Lost Items by Date</div>
+                            <div class="card-modern">Update Lost Item Details</div>
+                            <div class="card-modern">Report Found Item</div>
+                            <div class="card-modern">Track Found Item Status</div>
+                            <div class="card-modern">Export Lost & Found Reports</div>
+                            <div class="card-modern">Download Report Summary</div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-category-modern">
+                        <div class="category-header">
+                            <h3>Notifications</h3>
+                        </div>
+                        <div class="card-grid">
+                            <div class="card-modern">Receive Notifications</div>
+                            <div class="card-modern">Customize Notification Settings</div>
+                            <div class="card-modern">Set Alerts for Found Items</div>
+                            <div class="card-modern">SMS Alerts for Found Items</div>
+                            <div class="card-modern">Email Alerts for Found Items</div>
+                            <div class="card-modern">Push Notifications for Found Items</div>
+                            <div class="card-modern">In App Alerts for Item Status Changes</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-column">
+                    <div class="card-category-modern">
+                        <div class="category-header">
+                            <h3>Item Retrieval</h3>
+                        </div>
+                        <div class="card-grid">
+                            <div class="card-modern">Item Retrieval Scheduling</div>
+                            <div class="card-modern">View Found Items</div>
+                            <div class="card-modern">Select Retrieval Location</div>
+                            <div class="card-modern">Schedule Retrieval Appointment</div>
+                            <div class="card-modern">Confirm Item Ownership</div>
+                            <div class="card-modern">Claim Item Process</div>
+                            <div class="card-modern">Select Retrieval Time Slot</div>
+                            <div class="card-modern">Confirm Retrieval</div>
+                            <div class="card-modern">Cancel Retrieval</div>
+                            <div class="card-modern">Track Retrieval Status</div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-category-modern">
+                        <div class="category-header">
+                            <h3>Profile Section</h3>
+                        </div>
+                        <div class="card-grid">
+                            <div class="card-modern">Login / Authentication</div>
+                            <div class="card-modern">Update Personal Information</div>
+                            <div class="card-modern">Manage Account Settings</div>
+                            <div class="card-modern">Change Password</div>
+                            <div class="card-modern">Set Security Questions</div>
+                            <div class="card-modern">Manage Payment Methods</div>
+                            <div class="card-modern">View Account Activity History</div>
+                            <div class="card-modern">Set Account Preferences</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-column">
+                    <div class="card-category-modern">
+                        <div class="category-header">
+                            <h3>Feedback</h3>
+                        </div>
+                        <div class="card-grid">
+                            <div class="card-modern">Contact Customer Support</div>
+                            <div class="card-modern">Provide Feedback</div>
+                            <div class="card-modern">Access FAQ / Help Section</div>
+                            <div class="card-modern">Chat with Support Agent</div>
+                            <div class="card-modern">Call Support Hotline</div>
+                            <div class="card-modern">Submit a Complaint</div>
+                            <div class="card-modern">View Support Ticket Status</div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-category-modern">
+                        <div class="category-header">
+                            <h3>Browse</h3>
+                        </div>
+                        <div class="card-grid">
+                            <div class="card-modern">Search Lost Items by Date</div>
+                            <div class="card-modern">Search Found Items by Description</div>
+                            <div class="card-modern">Search by Station Name</div>
+                            <div class="card-modern">Advanced Search Filters</div>
+                            <div class="card-modern">Track Search History</div>
+                            <div class="card-modern">Save Search Queries</div>
+                            <div class="card-modern">Search Assistance Toolbox</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- IA Diagram -->
+        <section class="section">
+            <h2>Information Architecture - Final IA Diagram</h2>
+            <div class="ia-diagram-container">
+                <div class="ia-home-node">
+                    <div class="ia-node-main">Home</div>
+                </div>
+                
+                <div class="ia-main-branches">
+                    <div class="ia-branch-section">
+                        <div class="ia-branch-header">Report & Track</div>
+                        <div class="ia-sub-items">
+                            <div class="ia-sub-item">Track Recent Metro Trips</div>
+                            <div class="ia-sub-item">Report Lost Item</div>
+                            <div class="ia-sub-item">Track Lost Items by Station</div>
+                            <div class="ia-sub-item">Track Retrieval Status</div>
+                            <div class="ia-sub-item">View Report History</div>
+                            <div class="ia-sub-item">Report Found Item</div>
+                            <div class="ia-sub-item">Track Found Item Status</div>
+                            <div class="ia-sub-item">Export Lost & Found Reports</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ia-branch-section">
+                        <div class="ia-branch-header">Lost Item Collection</div>
+                        <div class="ia-sub-items">
+                            <div class="ia-sub-item">View Found Items</div>
+                            <div class="ia-sub-item">Confirm Item Ownership</div>
+                            <div class="ia-sub-item">Claim Item Process</div>
+                            <div class="ia-sub-item">Select Retrieval Time Slot</div>
+                            <div class="ia-sub-item">Confirm Retrieval</div>
+                            <div class="ia-sub-item">Cancel Retrieval</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ia-branch-section">
+                        <div class="ia-branch-header">Notifications & Alerts</div>
+                        <div class="ia-sub-items">
+                            <div class="ia-sub-item">Receive Notifications</div>
+                            <div class="ia-sub-item">SMS Alerts for Found Items</div>
+                            <div class="ia-sub-item">Push Notifications for Found Items</div>
+                            <div class="ia-sub-item">In App alerts for Item Status Changes</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ia-branch-section">
+                        <div class="ia-branch-header">My Account</div>
+                        <div class="ia-sub-items">
+                            <div class="ia-sub-item">Login / Authentication</div>
+                            <div class="ia-sub-item">Update Personal Details</div>
+                            <div class="ia-sub-item">Manage Account Settings</div>
+                            <div class="ia-sub-item">Change Password</div>
+                            <div class="ia-sub-item">History</div>
+                            <div class="ia-sub-item">My Trips</div>
+                        </div>
+                            <li>Change Password</li>
+                            <li>History</li>
+                            <li>My Trips</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ia-branch">
+                        <h4>Support & Feedback</h4>
+                        <ul>
+                            <li>Contact Customer Support</li>
+                            <li>Provide Feedback</li>
+                            <li>FAQ / Help Section</li>
+                            <li>Chat with Support Agent</li>
+                            <li>Submit a Complaint</li>
+                            <li>View Support Ticket Status</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ia-branch">
+                        <h4>Search & Functionality</h4>
+                        <ul>
+                            <li>Search Lost Items by Name/Date</li>
+                            <li>Search by Station Name</li>
+                            <li>Advanced Search Filters</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Interaction Design -->
+        <section class="section">
+            <h2>Interaction Design - Primary Task Flow</h2>
+            <div class="task-flow">
+                <h3>Task : Report Lost Item</h3>
+                <p>A user can report a lost item by following very simple and linear steps, which doesn't involve any decisive phase. It mostly has data entry fields related to locating the lost item.</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-step">Launch App</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">Login / Authenticate</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">Submit Login Credentials</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">Home</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">Access Lost & Found Section</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">Report Lost Item</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">Select Station / Line</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">Enter Lost Location</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">Metro Car</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Interactive Paper Prototypes -->
+        <section class="section">
+            <h2>Interaction Design - Interactive Paper Prototypes</h2>
+            <div class="prototype-screens">
+                <div class="prototype-row">
+                    <div class="prototype-screen">
+                        <div class="screen-number">1</div>
+                        <img src="https://images.unsplash.com/photo-1556656793-08538906a9f8?w=200&h=350&fit=crop" alt="Home Screen">
+                        <h4>Home Screen</h4>
+                    </div>
+                    <div class="prototype-screen">
+                        <div class="screen-number">2</div>
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=200&h=350&fit=crop" alt="Lost & Found Section">
+                        <h4>Lost & Found Section</h4>
+                    </div>
+                    <div class="prototype-screen">
+                        <div class="screen-number">3</div>
+                        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=350&fit=crop" alt="Select station / line">
+                        <h4>Select station / line</h4>
+                    </div>
+                    <div class="prototype-screen">
+                        <div class="screen-number">4</div>
+                        <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=200&h=350&fit=crop" alt="Select station / line">
+                        <h4>Select station / line</h4>
+                    </div>
+                </div>
+                
+                <div class="prototype-row">
+                    <div class="prototype-screen">
+                        <div class="screen-number">5</div>
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=350&fit=crop" alt="Select lost location">
+                        <h4>Select lost location</h4>
+                    </div>
+                    <div class="prototype-screen">
+                        <div class="screen-number">6</div>
+                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=200&h=350&fit=crop" alt="Select seat">
+                        <h4>Select seat</h4>
+                    </div>
+                    <div class="prototype-screen">
+                        <div class="screen-number">7</div>
+                        <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=200&h=350&fit=crop" alt="Enter item details">
+                        <h4>Enter item details</h4>
+                    </div>
+                    <div class="prototype-screen">
+                        <div class="screen-number">8</div>
+                        <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=200&h=350&fit=crop" alt="Enter owner details">
+                        <h4>Enter owner details</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Visual Design Strategy -->
+        <section class="section">
+            <h2>Visual Design Strategy - Mindmap</h2>
+            <div class="mindmap">
+                <div class="mindmap-center">Home</div>
+                <div class="mindmap-branches">
+                    <div class="mindmap-branch left">
+                        <h4>Lost & Found</h4>
+                        <ul>
+                            <li>Report Lost Item</li>
+                            <li>Report Found Item</li>
+                            <li>Report on behalf</li>
+                        </ul>
+                        <h4>Alert</h4>
+                        <ul>
+                            <li>Report Suspicious Activity</li>
+                            <li>Send Alert</li>
+                        </ul>
+                    </div>
+                    <div class="mindmap-branch right">
+                        <h4>Browse</h4>
+                        <ul>
+                            <li>Date</li>
+                            <li>Station</li>
+                            <li>Time</li>
+                        </ul>
+                        <h4>Profile</h4>
+                        <ul>
+                            <li>Personal Info</li>
+                            <li>Travel History</li>
+                            <li>My Metro</li>
+                            <li>Reporting / Retrieval History</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Visual Design Keywords -->
+        <section class="section">
+            <h2>Visual Design Strategy - Keywords</h2>
+            <div class="keywords-cloud">
+                <span class="keyword large">Security</span>
+                <span class="keyword medium">Convenience</span>
+                <span class="keyword small">Transparency</span>
+                <span class="keyword medium">Trust</span>
+                <span class="keyword small">Reminders</span>
+                <span class="keyword large">Recovery</span>
+                <span class="keyword small">Verification</span>
+                <span class="keyword medium">Connectivity</span>
+                <span class="keyword small">Feedback</span>
+                <span class="keyword large">Navigation</span>
+                <span class="keyword small">Tracking</span>
+                <span class="keyword large">Urgency</span>
+                <span class="keyword small">User Friendly</span>
+                <span class="keyword medium">Support</span>
+                <span class="keyword small">Anxiety</span>
+                <span class="keyword medium">Alerts</span>
+            </div>
+        </section>
+        
+        <!-- Visual Design Moodboard -->
+        <section class="section">
+            <h2>Visual Design Strategy - Moodboard</h2>
+            <div class="moodboard">
+                <div class="moodboard-grid">
+                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=150&fit=crop" alt="Metro Station">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=200&h=150&fit=crop" alt="Metro Interior">
+                    <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=200&h=150&fit=crop" alt="Metro Platform">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=150&fit=crop" alt="Metro Tunnel">
+                    <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=200&h=150&fit=crop" alt="Metro Train">
+                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=150&fit=crop" alt="Metro Crowd">
+                </div>
+                <div class="metro-branding">
+                    <h3>METRO</h3>
+                    <p>Mood Board</p>
+                    <div class="color-palette">
+                        <div class="color-swatch" style="background-color: #333;"></div>
+                        <div class="color-swatch" style="background-color: #666;"></div>
+                        <div class="color-swatch" style="background-color: #999;"></div>
+                        <div class="color-swatch" style="background-color: #4F45C3;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back to Portfolio Button -->
+        <div class="back-to-portfolio">
+            <a href="index.html" class="back-btn">← Back to Portfolio</a>
+        </div>
+    </main>
+</body>
+</html>

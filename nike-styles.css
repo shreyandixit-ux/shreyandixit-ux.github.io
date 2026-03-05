@@ -1,0 +1,797 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #333;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #6B73FF;
+}
+
+/* Main Content */
+.main-content {
+    margin-top: 80px;
+    padding: 2rem 0;
+}
+
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+/* Hero Section */
+.hero-section {
+    background: white;
+    padding: 4rem 2rem;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.problem-section h2,
+.solution-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.red-text {
+    color: #FF4444;
+}
+
+.blue-text {
+    color: #6B73FF;
+}
+
+.problem-section p,
+.solution-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Secondary Research */
+.research-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.research-list {
+    list-style: none;
+    padding: 0;
+}
+
+.research-list li {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.research-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #6B73FF;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Business Goals */
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.goal-pill {
+    background: white;
+    border: 2px solid #6B73FF;
+    color: #6B73FF;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.goal-pill:hover {
+    background: #6B73FF;
+    color: white;
+}
+
+/* Market Table */
+.market-table {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.market-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.market-table th {
+    background: #f8f9fa;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.market-table td {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: top;
+}
+
+.market-table td:first-child {
+    background: #6B73FF;
+    color: white;
+    font-weight: 600;
+    text-align: left;
+}
+
+/* Competitive Analysis */
+.competitive-table {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.competitive-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.competitive-table th {
+    background: #f8f9fa;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.competitive-table td {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+}
+
+.competitive-table td:first-child {
+    background: #6B73FF;
+    color: white;
+    font-weight: 600;
+    text-align: left;
+}
+
+.check {
+    color: #28a745;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.overall-rating {
+    background: #f8f9fa;
+}
+
+.rating-red {
+    color: #FF4444;
+    font-weight: 600;
+}
+
+/* Consumer Analysis */
+.consumer-table {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.consumer-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.consumer-table th {
+    background: #f8f9fa;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.consumer-table td {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: top;
+    font-size: 0.9rem;
+}
+
+.consumer-table td:first-child {
+    background: #6B73FF;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Brand Mapping */
+.brand-mapping {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.mapping-chart {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    border-left: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
+
+.y-axis {
+    position: absolute;
+    left: -80px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.x-axis {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.axis-label {
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.brand-positions {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.brand {
+    position: absolute;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.stockx {
+    background: #28a745;
+    color: white;
+    top: 20%;
+    right: 10%;
+}
+
+.superkicks {
+    background: #333;
+    color: white;
+    bottom: 30%;
+    left: 10%;
+}
+
+/* Logo Explorations */
+.logo-explorations {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logo-option {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo-option:hover {
+    transform: scale(1.05);
+}
+
+.yellow-circle {
+    background: #FFD700;
+    border-radius: 50%;
+}
+
+.yellow-circle-alt {
+    background: #FFA500;
+    border-radius: 50%;
+}
+
+.black-square {
+    background: #333;
+}
+
+.blue-rect {
+    background: #6B73FF;
+}
+
+.red-rect {
+    background: #FF4444;
+}
+
+.orange-square {
+    background: #FF8C00;
+}
+
+.orange-alt {
+    background: #FF6B35;
+}
+
+.black-circle {
+    background: #333;
+    border-radius: 50%;
+}
+
+.logo-text-wys {
+    color: #6B73FF;
+    font-size: 1.5rem;
+}
+
+.logo-text-white {
+    color: white;
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+.logo-text-yellow {
+    color: #FFD700;
+    font-size: 0.7rem;
+    line-height: 1.2;
+}
+
+/* Final Logo */
+.final-logo {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.logo-showcase {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.final-logo-main {
+    background: #FF8C00;
+    padding: 2rem;
+    border-radius: 12px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.color-palette-small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.color-strip {
+    width: 40px;
+    height: 30px;
+}
+
+.color-strip.orange {
+    background: #FF8C00;
+}
+
+.color-strip.purple {
+    background: #8A2BE2;
+}
+
+.logo-specs {
+    text-align: center;
+}
+
+.logo-specs p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.alphabet-display {
+    margin-top: 1rem;
+}
+
+/* Color Inspiration */
+.color-inspiration {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.lakers-logo img {
+    width: 200px;
+    height: auto;
+    border-radius: 12px;
+}
+
+.color-explanation {
+    flex: 1;
+}
+
+.inspiration-colors {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.color-block {
+    width: 60px;
+    height: 40px;
+    border-radius: 6px;
+}
+
+.purple-block {
+    background: #8A2BE2;
+}
+
+.yellow-block {
+    background: #FFD700;
+}
+
+.black-block {
+    background: #333;
+}
+
+/* Digital Use */
+.digital-use {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.app-screens {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-screen {
+    text-align: center;
+}
+
+.phone-screen img {
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin-bottom: 1rem;
+}
+
+.phone-screen p {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Product Card Section */
+.product-card-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+.card-overview h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.card-overview h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1.5rem 0 1rem 0;
+    color: #333;
+}
+
+.social-proof-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.proof-item h5 {
+    color: #6B73FF;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.proof-item ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.proof-item li {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.product-card-mockup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-card-mockup img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Final Screen */
+.final-screen {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.screen-mockup img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.screen-features h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.screen-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.screen-features li {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.screen-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Section Headings */
+.section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .logo-showcase {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .color-inspiration {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .app-screens {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .product-card-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .final-screen {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .brand-mapping {
+        padding: 1rem;
+    }
+    
+    .mapping-chart {
+        width: 300px;
+        height: 250px;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+}
