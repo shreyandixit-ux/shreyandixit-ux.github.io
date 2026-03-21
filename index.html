@@ -14,7 +14,13 @@
             <div class="logo">
                 <span>SD</span>
             </div>
-            <ul class="nav-menu">
+            <!-- Hamburger button (visible on small screens) -->
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#about">About me</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -167,13 +173,13 @@
             <!-- Project 3 -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/Project3.png" alt="Watch Your Steps App">
+                    <img src="images/vibe_discovery_screen.png" alt="Vibe discovery app">
                 </div>
                 <div class="project-content">
                     <div class="project-header">
-                        <span class="project-type">UX CASE STUDY</span>
-                        <h4 class="project-title">Watch Your Steps</h4>
-                        <span class="project-duration">Project Duration : 3 - 6 Months</span>
+                        <span class="project-type">UI DESIGN</span>
+                        <h4 class="project-title">Vibe Discovery App</h4>
+                        <span class="project-duration">Project Duration : 1 Month</span>
                     </div>
                     <div class="project-description">
                         <h5>Project Overview</h5>
@@ -185,6 +191,80 @@
                         <span class="feature">Authenticity check</span>
                         <span class="feature">Trustworthy purchases</span>
                         <span class="feature">Intuitive UI</span>
+                    </div>
+                    <a href="nike-project.html" class="view-project-btn">View full project</a>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/Project4.png" alt="SneakScan App">
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <span class="project-type">UX CASE STUDY</span>
+                        <h4 class="project-title">SneakScan</h4>
+                        <span class="project-duration">Project Duration : 3 - 6 Months</span>
+                    </div>
+                    <div class="project-description">
+                        <h5>Project Overview</h5>
+                        <p>SneakScan is a mobile app that gathers sneaker listings from platforms like StockX, Flight Club, etc. Letting users compare prices in real time, set alerts, and find the best deals easily.</p>
+                    </div>
+                    <div class="project-features">
+                        <span class="feature">Multi-brand store</span>
+                        <span class="feature">Authenticity check</span>
+                        <span class="feature">Trustworthy purchases</span>
+                        <span class="feature">Intuitive UI</span>
+                    </div>
+                    <a href="nike-project.html" class="view-project-btn">View full project</a>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/asian_hires_mockup.png" alt="Asian Hires Website">
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <span class="project-type">WEBSITE DESIGN</span>
+                        <h4 class="project-title">Asian Hires Website</h4>
+                        <span class="project-duration">Project Duration : 6 Months</span>
+                    </div>
+                    <div class="project-description">
+                        <h5>Project Overview</h5>
+                        <p>This project involved designing the Asian Hires website from scratch, from research and content structuring to final UI design. The goal was to create a clean, credible, and user-friendly website that clearly communicates the brand and its services.</p>
+                    </div>
+                    <div class="project-features">
+                        <span class="feature">Find a job</span>
+                        <span class="feature">Post a job</span>
+                        <span class="feature">AI Powered Matching</span>
+                        <span class="feature">Career consultation</span>
+                    </div>
+                    <a href="projects/asian-hires.html" class="view-project-btn">View full project</a>
+                </div>
+            </div>
+            <!-- Project 6 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/habit_loop_app.png" alt="Habit Loop">
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <span class="project-type">UX CASE STUDY</span>
+                        <h4 class="project-title">Habit Loop App</h4>
+                        <span class="project-duration">Project Duration : 3 Months</span>
+                    </div>
+                    <div class="project-description">
+                        <h5>Project Overview</h5>
+                        <p>This project involved designing the Asian Hires website from scratch, from research and content structuring to final UI design. The goal was to create a clean, credible, and user-friendly website that clearly communicates the brand and its services.</p>
+                    </div>
+                    <div class="project-features">
+                        <span class="feature">Find a job</span>
+                        <span class="feature">Post a job</span>
+                        <span class="feature">AI Powered Matching</span>
+                        <span class="feature">Career consultation</span>
                     </div>
                     <a href="nike-project.html" class="view-project-btn">View full project</a>
                 </div>
@@ -218,5 +298,52 @@
             <p>This page ends here, but ambition lives on.</p>
         </footer>
     </main>
+    <script>
+        // Mobile nav toggle with Escape key and body scroll lock
+        (function () {
+            const btn = document.querySelector('.hamburger');
+            const menu = document.getElementById('nav-menu');
+            const body = document.body;
+
+            if (!btn || !menu) return;
+
+            function setOpen(isOpen) {
+                btn.classList.toggle('active', isOpen);
+                menu.classList.toggle('open', isOpen);
+                btn.setAttribute('aria-expanded', String(isOpen));
+                body.style.overflow = isOpen ? 'hidden' : '';
+            }
+
+            function toggleMenu() {
+                setOpen(!btn.classList.contains('active'));
+            }
+
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                toggleMenu();
+            });
+
+            // Close when clicking a link
+            menu.addEventListener('click', function (e) {
+                if (e.target.tagName === 'A') {
+                    setOpen(false);
+                }
+            });
+
+            // Close when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                    setOpen(false);
+                }
+            });
+
+            // Close on Escape
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    setOpen(false);
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
