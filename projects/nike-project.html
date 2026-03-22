@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Mobile App Redesign - UX Case Study</title>
+    <link rel="stylesheet" href="nike-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Responsive hamburger + local overrides so this page matches the home behaviour */
+        .nav-container { position: relative; }
+        .hamburger { display: none; background: none; border: 0; cursor: pointer; padding: 8px; align-items: center; }
+        .hamburger .bar { display: block; width: 22px; height: 2px; background: #111; margin: 4px 0; transition: transform .25s ease; }
+
+        /* Figma embed styles */
+        .figma-embed { text-align: center; margin: 48px 0; }
+        .figma-embed .embed-wrap { display: inline-block; max-width: 100%; }
+        .figma-embed iframe { width: 800px; max-width: 100%; height: 450px; border: 1px solid rgba(0,0,0,0.1); border-radius: 6px; }
+        .back-home { display: inline-block; margin-top: 16px; text-decoration: none; padding: 10px 16px; background: #111; color: #fff; border-radius: 6px; }
+
+        @media (max-width: 768px) {
+            .hamburger { display: inline-flex; flex-direction: column; justify-content: center; z-index: 40; }
+            .nav-menu { display: none; position: absolute; top: 56px; right: 12px; background: #fff; padding: 12px 16px; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+            .nav-menu.open { display: block; }
+            .nav-menu li { margin: 8px 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">S</span>
+            </div>
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Nike Mobile App Redesign</h1>
+                <div class="hero-layout">
+                    <div class="hero-text">
+                        <div class="problem-section">
+                            <h2><span class="red-text">Problem</span> Statement</h2>
+                            <p>Sneaker enthusiasts often face cluttered, inconsistent interfaces across multi-brand shopping apps, making exploration and comparison difficult. There's a clear need for a cleaner, more intuitive platform that brings multiple sneaker brands together under a single, premium experience.</p>
+                        </div>
+                        
+                        <div class="solution-section">
+                            <h2><span class="blue-text">Design</span> Solution</h2>
+                            <p>To address this, I conceptualised a multi-brand sneaker app and chose to redesign the Discover screen by drawing inspiration from Nike's mobile app—known for its clean, minimal UI. The goal was to retain its simplicity while expanding functionality to support multi-brand-agnostic discovery.</p>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=300&h=500&fit=crop" alt="Nike App Mockup">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Figma embed -->
+        <section class="figma-embed" aria-label="Figma embed">
+            <div class="embed-wrap">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://embed.figma.com/slides/wTUigWmHdri9tGzB1Clgun/UED_P5_1090?node-id=37-8&embed-host=share" allowfullscreen title="UED_P5_1090 Figma slides"></iframe>
+            </div>
+            <div>
+                <a class="back-home" href="../index.html">Back To Homepage</a>
+            </div>
+        </section>
+    </main>
+    <script>
+        // Mobile hamburger toggle (isolated to this page)
+        (function(){
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            if (!hamburger || !navMenu) return;
+
+            function setAria(expanded){
+                hamburger.setAttribute('aria-expanded', expanded);
+            }
+
+            hamburger.addEventListener('click', function(e){
+                const opened = navMenu.classList.toggle('open');
+                setAria(opened);
+                document.body.style.overflow = opened ? 'hidden' : '';
+            });
+
+            // Close on Escape
+            document.addEventListener('keydown', function(e){
+                if (e.key === 'Escape' && navMenu.classList.contains('open')){
+                    navMenu.classList.remove('open');
+                    setAria(false);
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close when clicking outside
+            document.addEventListener('click', function(e){
+                if (!navMenu.classList.contains('open')) return;
+                const isClickInside = navMenu.contains(e.target) || hamburger.contains(e.target);
+                if (!isClickInside){
+                    navMenu.classList.remove('open');
+                    setAria(false);
+                    document.body.style.overflow = '';
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
